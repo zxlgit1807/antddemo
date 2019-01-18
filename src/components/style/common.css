@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+}
+.nav-left {
+    min-width: 180px;
+    height: calc(100vh);
+    background-color: brown;
+}
+.main {
+    height: calc(100vh);
+}
+.content {
+    position: relative;
+    padding: 20px;
+}
