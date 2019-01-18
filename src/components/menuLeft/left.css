@@ -1,0 +1,14 @@
+.icon_css {
+    line-height: 90px;
+    padding-left: 20px;
+    background-color: black;
+}
+.logo_img {
+    height: 35px;
+}
+.logo_font {
+    color: red;
+    font-weight: bold;
+    font-size: medium;
+    margin-left: 10px;
+}
