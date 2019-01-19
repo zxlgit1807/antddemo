@@ -1,10 +1,11 @@
 import React from 'react';
+import './footer.css';
 
 export default class Footer extends React.Component {
 
     render() {
         return(
-            <div>底部</div>
+            <div className="footer">版权磊哥所有</div>
         )
     }
 }

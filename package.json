@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^3.12.3",
     "babel-plugin-import": "^1.11.0",
+    "jsonp": "^0.2.1",
     "react": "^16.7.0",
     "react-app-rewired": "2.0.2-next.0",
     "react-dom": "^16.7.0",

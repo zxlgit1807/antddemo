@@ -4,6 +4,7 @@ import { Button, Row, Col } from 'antd';
 import Footer from './components/footer';
 import MenuLeft from './components/menuLeft';
 import MyHeader from './components/header';
+import Home from './pages/home/home';
 
 export default class Admin extends React.Component {
 
@@ -14,9 +15,9 @@ export default class Admin extends React.Component {
                     <MenuLeft></MenuLeft>
                 </Col>
                 <Col span="21" className="main">
-                    <MyHeader></MyHeader>
+                    <MyHeader className= 'main-header'></MyHeader>
                     <Row className="content">
-                        中间
+                        <Home ></Home>
                     </Row>
                     <Footer></Footer>
                 </Col>

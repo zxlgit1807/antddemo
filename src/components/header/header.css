@@ -1,3 +1,6 @@
+.header {
+    background-color: white;
+}
 .header-top {
     height: 60px;
     line-height: 60px;
@@ -20,6 +23,13 @@
     text-align: right;
 }
 .date {
-    margin-left: 10px;
-    color: crimson;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.weather-img img{
+    height: 15px;
+}
+.weather-detail {
+    margin-left: 5px;
+    vertical-align: middle;
 }

@@ -6,6 +6,6 @@ export default {
             return '';
         }
         let time = new Date(data);
-        return time.getFullYear()+"-"+time.getMonth()+1 +"-"+time.getDay()+" "+time.getHours() + ":"+time.getMinutes()+":"+time.getMilliseconds();
+        return time.getFullYear()+"-"+time.getMonth()+1 +"-"+time.getDay()+" "+time.getHours() + ":"+time.getMinutes()+":"+time.getSeconds();
     }
 }
