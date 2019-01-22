@@ -14,6 +14,7 @@ import MyGallerys from './pages/ui/gallery'
 import MyCarousels from './pages/ui/carousels'
 import MyLogin from './pages/form/login'
 import MyRegister from './pages/form/register'
+import MyBasicTable from './pages/table/basicTable'
 
 export default class MyRouters extends React.Component {
 
@@ -35,6 +36,7 @@ export default class MyRouters extends React.Component {
                                     <Route path="/admin/ui/carousel" component={MyCarousels}/>
                                     <Route path="/admin/form/login" component={MyLogin}/>
                                     <Route path="/admin/form/reg" component={MyRegister}/>
+                                    <Route path="/admin/table/basic" component={MyBasicTable}/>
                                     <Route component={Err404}/>
                                 </Switch>
                             </Admin>
