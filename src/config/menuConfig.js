@@ -51,7 +51,7 @@ const menuList = [
             },
             {
                 title:'注册',
-                key:'/form/reg',
+                key:'/admin/form/reg',
             }
         ]
     },
