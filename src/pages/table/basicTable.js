@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Table } from 'antd';
-import axios from 'axios';
+import axios from '../../axios/index';
 
 export default class MyBasicTable extends React.Component{
 
@@ -50,17 +50,34 @@ export default class MyBasicTable extends React.Component{
     }
 
     // 动态获取mock数据
+    // request=()=>{
+    //     axios.get('https://www.easy-mock.com/mock/5c4734d02da20279e9a765a3/zxl/user/list')
+    //         .then((res)=>{
+    //             // console.log("用户列表：" + JSON.stringify(res));
+    //             if(res.status == '200' && res.data.code == 0) {
+    //                 this.setState({
+    //                     dataSource2: res.data.result
+    //                 })
+    //             }
+    //         });
+    // }
     request=()=>{
-        axios.get('https://www.easy-mock.com/mock/5c4734d02da20279e9a765a3/zxl/user/list')
-            .then((res)=>{
-                // console.log("用户列表：" + JSON.stringify(res));
-                if(res.status == '200' && res.data.code == 0) {
-                    this.setState({
-                        dataSource2: res.data.result
-                    })
+        axios.ajax({
+            url: '/user/list',
+            data: {
+                params:{
+                    page: 1,
                 }
-            });
+            }
+        }).then((res)=>{
+            if(res.code == 0) {
+                this.setState({
+                    dataSource2: res.result
+                })
+            }
+        })
     }
+
     render(){
         const columns = [{
             title: 'id',
