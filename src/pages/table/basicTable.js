@@ -1,10 +1,14 @@
 import React from 'react';
 import { Card, Table, Modal, Button, message } from 'antd';
 import axios from '../../axios/index';
+import utils from '../../utils/utils';
 
 export default class MyBasicTable extends React.Component{
 
     state={
+    }
+    params = {
+        page: 1
     }
 
     componentDidMount(){
@@ -62,23 +66,28 @@ export default class MyBasicTable extends React.Component{
     //         });
     // }
     request=()=>{
+        let _this = this;
         axios.ajax({
             url: '/user/list',
             data: {
                 params:{
-                    page: 1,
+                    page: this.params.page,
                 }
             }
         }).then((res)=>{
             if(res.code == 0) {
                 // 给每行赋唯一值
-                res.result.map((item,index)=>{
+                res.result.list.map((item,index)=>{
                     item.key = index;
                  })
                 this.setState({
-                    dataSource2: res.result,
+                    dataSource2: res.result.list,
                     selectedRowKeys:[],
                     selectedRows:null,
+                    pagination: utils.pagination(res,(current)=>{
+                        _this.params.page = current;
+                        this.request();
+                    }),
                 })
             }
         })
