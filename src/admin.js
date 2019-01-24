@@ -4,8 +4,10 @@ import { Button, Row, Col } from 'antd';
 import Footer from './components/footer';
 import MenuLeft from './components/menuLeft';
 import MyHeader from './components/header';
-import Home from './pages/home/home';
 
+/**
+ * 主页面载体
+ */
 export default class Admin extends React.Component {
 
     render() {

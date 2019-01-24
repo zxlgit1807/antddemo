@@ -17,6 +17,9 @@ import MyRegister from './pages/form/register'
 import MyBasicTable from './pages/table/basicTable'
 import MyHighTable from './pages/table/highTable'
 import MyCity from './pages/city/city'
+import MyOrders from './pages/order/oders'
+import MyCommon from './commons'
+import OderDetails from './pages/order/details'
 
 export default class MyRouters extends React.Component {
 
@@ -41,11 +44,17 @@ export default class MyRouters extends React.Component {
                                     <Route path="/admin/table/basic" component={MyBasicTable}/>
                                     <Route path="/admin/table/high" component={MyHighTable}/>
                                     <Route path="/admin/city" component={MyCity}/>
+                                    <Route path="/admin/order" component={MyOrders}/>
                                     <Route component={Err404}/>
                                 </Switch>
                             </Admin>
                         } />
-                        
+                        <Route path="/common" render={() =>
+                            <MyCommon>
+                                <Route path="/common/order/detail/:orderId" component={OderDetails} />
+                            </MyCommon>
+                        }
+                        />
                     </App>
         </HashRouter>
         )

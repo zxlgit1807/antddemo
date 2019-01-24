@@ -1,0 +1,20 @@
+.detail-items{
+    text-align: center;
+    padding:25px 50px 25px 0;
+    border-bottom:1px solid ;
+}
+
+.detail-items .item-title{
+    color: blue;
+    font-size: 16px;
+}
+
+.detail-form li{
+    margin:20px 0;
+    line-height:20px;
+    font-size:15px;
+}
+.order-map{
+  height: 450px;
+  margin: 25px -31px 0;
+}
