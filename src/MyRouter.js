@@ -16,6 +16,7 @@ import MyLogin from './pages/form/login'
 import MyRegister from './pages/form/register'
 import MyBasicTable from './pages/table/basicTable'
 import MyHighTable from './pages/table/highTable'
+import MyCity from './pages/city/city'
 
 export default class MyRouters extends React.Component {
 
@@ -39,10 +40,12 @@ export default class MyRouters extends React.Component {
                                     <Route path="/admin/form/reg" component={MyRegister}/>
                                     <Route path="/admin/table/basic" component={MyBasicTable}/>
                                     <Route path="/admin/table/high" component={MyHighTable}/>
+                                    <Route path="/admin/city" component={MyCity}/>
                                     <Route component={Err404}/>
                                 </Switch>
                             </Admin>
                         } />
+                        
                     </App>
         </HashRouter>
         )

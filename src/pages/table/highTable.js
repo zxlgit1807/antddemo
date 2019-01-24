@@ -15,6 +15,18 @@ export default class MyHighTable extends React.Component{
         this.request();
     }
 
+    handleDelete=(item)=>{
+        let id = item.id;
+        Modal.confirm({
+            title:'确认',
+            content:'确定要删除么',
+            onOk:()=>{
+                message.success("删除成功")
+                this.request();
+            }
+        })
+    }
+
     request=()=>{
         let _this = this;
         axios.ajax({
@@ -46,7 +58,7 @@ export default class MyHighTable extends React.Component{
     render() {
         const columns = [{
             title: 'id',
-            width:50,
+            width:80,
             fixed: 'left',
             dataIndex: 'id'
         },{
@@ -62,7 +74,7 @@ export default class MyHighTable extends React.Component{
             }
         }, {
             title: '状态',
-            width:80,
+            width:180,
             dataIndex: 'state',
             render(state){
                 let config = {
@@ -76,7 +88,7 @@ export default class MyHighTable extends React.Component{
             }
         }, {
             title: '爱好',
-            width:80,
+            width:180,
             dataIndex: 'interest',
             render(interest){
                 let config = {
@@ -89,16 +101,21 @@ export default class MyHighTable extends React.Component{
             }
         }, {
             title: '生日',
-            width:80,
+            width:180,
             dataIndex: 'birthday'
         }, {
             title: '地址',
-            width:90,
+            width:220,
             dataIndex: 'address'
         }, {
             title: '早起时间',
             width:80,
             dataIndex: 'time'
+        }, {
+            title: '操作',
+            render:(text, item)=>{
+                return <Button size="small" onClick={(item)=> {this.handleDelete(item)}}>删除</Button>
+            }
         }]
 
         return(
@@ -112,7 +129,14 @@ export default class MyHighTable extends React.Component{
                         scroll={{x:1300,y:200}}
                     />
                 </Card>
-
+                <Card title="删除">
+                    <Table 
+                        bordered
+                        columns={columns}
+                        dataSource={this.state.dataSource2}
+                        pagination={false}
+                    />
+                </Card>
             </div>
         ) 
     }
