@@ -20,6 +20,8 @@ import MyCity from './pages/city/city'
 import MyOrders from './pages/order/oders'
 import MyCommon from './commons'
 import OderDetails from './pages/order/details'
+import MyPermission from './pages/permission/index'
+import MyUsers from './pages/user/index'
 
 export default class MyRouters extends React.Component {
 
@@ -45,6 +47,8 @@ export default class MyRouters extends React.Component {
                                     <Route path="/admin/table/high" component={MyHighTable}/>
                                     <Route path="/admin/city" component={MyCity}/>
                                     <Route path="/admin/order" component={MyOrders}/>
+                                    <Route path="/admin/permission" component={MyPermission}/>
+                                    <Route path="/admin/user" component={MyUsers}/>
                                     <Route component={Err404}/>
                                 </Switch>
                             </Admin>
