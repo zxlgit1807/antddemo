@@ -22,6 +22,11 @@ import MyCommon from './commons'
 import OderDetails from './pages/order/details'
 import MyPermission from './pages/permission/index'
 import MyUsers from './pages/user/index'
+import BikeMap from './pages/map/bike'
+import MyBars from './pages/echarts/myBar'
+import MyPies from './pages/echarts/myPie'
+import MyLines from './pages/echarts/myLine'
+import MyRichText from './pages/rich/myRichText'
 
 export default class MyRouters extends React.Component {
 
@@ -49,6 +54,11 @@ export default class MyRouters extends React.Component {
                                     <Route path="/admin/order" component={MyOrders}/>
                                     <Route path="/admin/permission" component={MyPermission}/>
                                     <Route path="/admin/user" component={MyUsers}/>
+                                    <Route path="/admin/bikeMap" component={BikeMap}/>
+                                    <Route path="/admin/echarts/bars" component={MyBars}/>
+                                    <Route path="/admin/echarts/pies" component={MyPies}/>
+                                    <Route path="/admin/echarts/lines" component={MyLines}/>
+                                    <Route path="/admin/rich" component={MyRichText}/>
                                     <Route component={Err404}/>
                                 </Switch>
                             </Admin>
